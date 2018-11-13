@@ -11,9 +11,11 @@
     <view class="caption">
       <text>已有123次打卡</text>
     </view>
-    <view class="publish-button">
+    <view class="publish-button" bindtap="bindPulishTap">
       <text>打卡！</text>
     </view>
   </view>
-  <template is="check-card" />
+  <view wx:for="{{checkData}}" wx:key="id">
+    <template is="check-card" data="{{...item}}" />
+  </view>
 </view>

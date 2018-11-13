@@ -26,7 +26,6 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  height: 500rpx;
   border-radius: 2rpx;
   margin: 10rpx;
 }
@@ -49,6 +48,16 @@
   color: grey;
 }
 
+.time {
+  text-align: center;
+  margin-top: -20rpx;
+}
+
+.time text {
+  font-size: 20rpx;
+  color: darkgray;
+}
+
 .words {
   text-align: center;
 }
@@ -57,9 +66,28 @@
   font-size: 35rpx;
 }
 
+.words text ::before {
+  content: "“";
+  font-size: 80rpx;
+  color: gray;
+}
+
+.words text ::after {
+  content: "”";
+  font-size: 80rpx;
+  color: gray;
+}
+
 .card__action {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+}
+
+.action-button {
+  margin: 20rpx;
+  color: gray;
+  font-size: 20rpx;
+  text-align: center;
 }

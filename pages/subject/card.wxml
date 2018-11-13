@@ -1,13 +1,28 @@
 <template name="check-card">
   <view class="check-card">
     <view class="banner">
-      <image src="../../images/bg.jpg" mode="aspectFill"></image>
+      <image src="http://linyxus.xyz/file/data/vip_data/bg.jpg" mode="aspectFill"></image>
     </view>
     <view class="nickname">
-      <text>徐逸辰</text>
+      <text>{{user}}</text>
+    </view>
+    <view class="time">
+      <text>{{time}}</text>
     </view>
     <view class="words">
-      <text>第一次背单词23333</text>
+      <text>{{words}}</text>
+    </view>
+    <view class="card__action">
+      <view class="action-button" bindtap="bindButtonTap" data-id="{{id}}">
+        <text>
+          {{thumbUps}} 赞
+        </text>
+      </view>
+      <view class="action-button">
+        <text>
+          举报
+        </text>
+      </view>
     </view>
   </view>
 </template>
