@@ -1,0 +1,16 @@
+<template name="entry-card">
+  <view class="entry-card">
+    <view class="title">
+      <text>Title</text>
+    </view>
+    <view class="desciption">
+      <text>Description</text>
+    </view>
+    <view class="caption">
+      <text>已有123次打卡</text>
+    </view>
+    <view class="opt-in-button">
+      <text>立即加入</text>
+    </view>
+  </view>
+</template>
