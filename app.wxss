@@ -8,3 +8,24 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.title text{
+  font-size: 50rpx;
+}
+
+.description text{
+  font-size: 25rpx;
+  flex-grow: 1;
+}
+
+.caption text{
+  font-size: 28rpx;
+  color: gray;
+}

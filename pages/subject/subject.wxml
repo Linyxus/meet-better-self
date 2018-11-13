@@ -1,5 +1,7 @@
-<template name="entry-card">
-  <view class="entry-card">
+<import src="card.wxml" />
+
+<view class="flow">
+  <view class="title-bar">
     <view class="title">
       <text>每天背单词</text>
     </view>
@@ -9,8 +11,9 @@
     <view class="caption">
       <text>已有123次打卡</text>
     </view>
-    <view class="opt-in-button" bindtap="bindOptInTap">
-      <text>立即加入</text>
+    <view class="publish-button">
+      <text>打卡！</text>
     </view>
   </view>
-</template>
+  <template is="check-card" />
+</view>

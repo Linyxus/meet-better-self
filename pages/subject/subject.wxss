@@ -1,0 +1,65 @@
+/* pages/subject/subject.wxss */
+
+.title-bar {
+  box-shadow: 0 5rpx 10rpx 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 300rpx;
+  padding: 30rpx;
+}
+
+.publish-button {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: dodgerblue;
+  padding: 20rpx;
+  text-align: center;
+  color: white;
+  border-radius: 5rpx;
+}
+
+.check-card {
+  box-shadow: 0 5rpx 10rpx 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 500rpx;
+  border-radius: 2rpx;
+  margin: 10rpx;
+}
+
+.banner {
+  height: 350rpx;
+}
+
+.banner image{
+  width: 100%;
+  height: 350rpx;
+}
+
+.nickname {
+  text-align: center;
+}
+
+.nickname text {
+  font-size: 25rpx;
+  color: grey;
+}
+
+.words {
+  text-align: center;
+}
+
+.words text {
+  font-size: 35rpx;
+}
+
+.card__action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}

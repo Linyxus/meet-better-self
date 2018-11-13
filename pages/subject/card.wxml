@@ -1,0 +1,13 @@
+<template name="check-card">
+  <view class="check-card">
+    <view class="banner">
+      <image src="../../images/bg.jpg" mode="aspectFill"></image>
+    </view>
+    <view class="nickname">
+      <text>徐逸辰</text>
+    </view>
+    <view class="words">
+      <text>第一次背单词23333</text>
+    </view>
+  </view>
+</template>
