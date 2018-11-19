@@ -1,7 +1,7 @@
 <template name="check-card">
   <view class="check-card">
     <view class="banner">
-      <image src="http://linyxus.xyz/file/data/vip_data/bg.jpg" mode="aspectFill"></image>
+      <image src="{{img}}" mode="aspectFill"></image>
     </view>
     <view class="nickname">
       <text>{{user}}</text>

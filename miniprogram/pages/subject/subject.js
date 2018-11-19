@@ -11,6 +11,7 @@ Page({
         user: '徐逸辰',
         time: '2018.11.13 21:23',
         words: '第一次背单词，坚持！！',
+        img: 'http://linyxus.xyz/file/data/vip_data/bg.jpg',
         thumbUps: 123
       },
       {
@@ -18,6 +19,7 @@ Page({
         user: '徐逸辰',
         time: '2018.11.13 21:23',
         words: '第一次背单词，坚持！！！！！！！',
+        img: 'http://linyxus.xyz/file/data/vip_data/bg.jpg',
         thumbUps: 234
       },
       {
@@ -25,20 +27,59 @@ Page({
         user: '徐逸辰',
         time: '2018.11.13 21:23',
         words: '第一次背单词，坚持！！',
+        img: 'http://linyxus.xyz/file/data/vip_data/bg.jpg',
         thumbUps: 345
       },
-    ]
+    ],
   },
 
   bindButtonTap: function(e) {
     console.log('tap!!!')
     console.log(e.currentTarget.dataset)
+    wx.showLoading({
+      title: 'Logining...',
+    })
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {}
+    }).then(
+      res => {
+        wx.hideLoading()
+        wx.showToast({
+          title: res.result.openid,
+          duration: 2000
+        })
+      }
+    )
   },
 
   bindPulishTap: function() {
     wx.chooseImage({
-      success: function(res) {
-        console.log(res)
+      success: res => {
+        const tempFilePath = res.tempFilePaths[0];
+        const task = wx.uploadFile({
+          url: 'http://localhost:8000/upload',
+          filePath: tempFilePath,
+          name: 'file',
+          success: res => {
+            console.log(res)
+            this.setData({
+              checkData: [
+                {
+                  id: 'cd-10',
+                  user: '徐逸辰',
+                  time: '2018.11.13 21:23',
+                  words: '第一次背单词，坚持！！',
+                  img: res.data,
+                  thumbUps: 123
+                },
+              ]
+            })
+          }
+        })
+        task.onProgressUpdate(res => {
+          console.log('上传进度', res.progress)
+        })
       },
       count: 1,
     })
