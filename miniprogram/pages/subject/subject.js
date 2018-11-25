@@ -1,6 +1,8 @@
 // pages/subject/subject.js
-Page({
 
+const moment = require('moment')
+
+Page({
   /**
    * 页面的初始数据
    */
@@ -53,6 +55,13 @@ Page({
     )
   },
 
+  bindButton2Tap: (e) => {
+    const time = moment('22:23:30', 'HH:mm:ss')
+    wx.showToast({
+      title: time.format('HH mm ss'),
+    })
+  },
+
   bindPulishTap: function() {
     wx.chooseImage({
       success: res => {
@@ -89,14 +98,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

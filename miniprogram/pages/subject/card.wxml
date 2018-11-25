@@ -18,7 +18,7 @@
           {{thumbUps}} 赞
         </text>
       </view>
-      <view class="action-button">
+      <view class="action-button" bindtap="bindButton2Tap">
         <text>
           举报
         </text>

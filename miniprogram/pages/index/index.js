@@ -7,7 +7,21 @@ Page({
     wx.navigateTo({
       url: '../subject/subject',
     })
-  }
+  },
+
+  data: {
+    subjects: []
+  },
+
+  onLoad: function() {
+    const db = wx.cloud.database()
+    db.collection('subjects').get()
+      .then(res => {
+        console.log(res)
+        app.globalData['subjects'] = res.data
+        this.setData({'subjects': res.data})
+      })
+  },
   // data: {
   //   motto: 'Hello World',
   //   userInfo: {},
