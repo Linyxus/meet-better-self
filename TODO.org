@@ -1,0 +1,49 @@
+* PROJECT Meet better self
+  DEADLINE: <2018-12-29 Sat>
+  This is the wechat miniprogram written for Meet Better Self in IPOC.
+  Currently, none extra toolkit is employed.
+
+** Backend
+   The backend is build with Wx Cloud.
+
+*** Database elements
+**** NEXT Subject                                                               :NO_DB:
+     A subject is the term students have to punch in every day.
+     A subject has the following properties:
+     - title
+     - description
+     - options
+       The options may need further explanation.
+       The `options` property must be a list, containing several objects.
+       Example:
+       { hint, type: ['number', 'bool'] }
+     - resolver, which is hosted on the cloud
+
+**** TODO Punch                                                                 :DB:
+     The record of punching-ins.
+     Properties:
+     - _user
+     - subjectId
+     - credits
+     - time
+
+**** TODO CreditChanges                                                         :DB:
+     The additional changes on credits.
+
+*** Cloud functions
+**** NEXT fetchSubjects
+     fetch all subjects
+**** TODO punchIn
+     Params:
+     - subjectId
+     - options
+     Results:
+     - success / failure
+
+** Frontend
+*** Apis
+**** NEXT fetchSubjects
+     fetch the list of subjects
+     the info of each subject: title, description, total records
+**** TODO fetchBunchOfSubject
+     fetch bunch records of specified subject
