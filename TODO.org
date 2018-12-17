@@ -8,6 +8,7 @@
 
 *** Database elements
 **** NEXT Subject                                                               :NO_DB:
+     SCHEDULED: <2018-12-17 Mon>
      A subject is the term students have to punch in every day.
      A subject has the following properties:
      - title
@@ -32,6 +33,7 @@
 
 *** Cloud functions
 **** NEXT fetchSubjects
+     SCHEDULED: <2018-12-17 Mon>
      fetch all subjects
 **** TODO punchIn
      Params:
@@ -43,6 +45,7 @@
 ** Frontend
 *** Apis
 **** NEXT fetchSubjects
+     SCHEDULED: <2018-12-17 Mon>
      fetch the list of subjects
      the info of each subject: title, description, total records
 **** TODO fetchBunchOfSubject
