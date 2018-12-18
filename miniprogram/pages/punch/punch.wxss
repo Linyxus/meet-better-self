@@ -1,9 +1,23 @@
 /* miniprogram/pages/punch/punch.wxss */
 
 .text {
-  border-width: 1rpx;
-  border-color: grey;
-  border-style: solid;
-  margin: 5rpx;
-  padding: 10rpx;
+  border-bottom-color: gray;
+  border-bottom-width: 2rpx;
+  border-bottom-style: solid;
+  padding: 20rpx;
+  min-height: 200rpx;
+}
+
+.imagesBar {
+  display: flex;
+  height: 50rpx;
+  flex-direction: row;
+}
+
+.imagesLabel {
+  flex-grow: 1;
+}
+
+.imagesButton {
+  width: 10rpx;
 }

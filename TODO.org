@@ -39,7 +39,11 @@
      - punch.resolver, which is hosted on the cloud
        resolve the punch, return `data` of the new record or `error`.
 
-**** NEXT Punch                                                          :DB:
+**** DONE Punch                                                                 :DB:
+     CLOSED: [2018-12-18 Tue 22:10]
+     :LOGBOOK:
+     - State "DONE"       from "NEXT"       [2018-12-18 Tue 22:10]
+     :END:
      The record of punching-ins.
      Properties:
      - _openid
@@ -82,4 +86,4 @@
      :LOGBOOK:
      - State "DONE"       from              [2018-12-18 Tue 16:34]
      :END:
-**** TODO Subject
+**** NEXT Subject

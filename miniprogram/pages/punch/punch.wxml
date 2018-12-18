@@ -1,6 +1,6 @@
 <!--miniprogram/pages/punch/punch.wxml-->
 <view class='flow'>
   <view class='text'>
-    <textarea bindblur="bindTextAreaBlur" auto-height placeholder="你此刻想说什么..." />
+    <textarea bindblur="bindTextAreaBlur" placeholder="你此刻想说什么..." />
   </view>
 </view>
