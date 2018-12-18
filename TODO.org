@@ -1,3 +1,15 @@
+#+BEGIN: clocktable :scope file :maxlevel 3
+#+CAPTION: Clock summary at [2018-12-18 Tue 14:35]
+| Headline                | Time |      |      |
+|-------------------------+------+------+------|
+| *Total time*              | *0:57* |      |      |
+|-------------------------+------+------+------|
+| Meet better self        | 0:57 |      |      |
+| \_  Backend             |      | 0:57 |      |
+| \_    Database elements |      |      | 0:13 |
+| \_    Cloud functions   |      |      | 0:44 |
+#+END:
+
 * PROJECT Meet better self
   DEADLINE: <2018-12-29 Sat>
   This is the wechat miniprogram written for Meet Better Self in IPOC.
@@ -7,33 +19,44 @@
    The backend is build with Wx Cloud.
 
 *** Database elements
-**** NEXT Subject                                                               :NO_DB:
-     SCHEDULED: <2018-12-17 Mon>
+**** DONE Subject                                                               :NO_DB:
+     CLOSED: [2018-12-18 Tue 16:33] SCHEDULED: <2018-12-17 Mon>
+     :LOGBOOK:
+     - State "DONE"       from "DELEGATED"  [2018-12-18 Tue 16:33]
+     - State "DELEGATED"  from "DONE"       [2018-12-18 Tue 13:56]
+     - State "DONE"       from "NEXT"       [2018-12-18 Tue 13:50]
+     CLOCK: [2018-12-18 Tue 13:37]--[2018-12-18 Tue 13:50] =>  0:13
+     :END:
      A subject is the term students have to punch in every day.
      A subject has the following properties:
      - title
      - description
-     - options
+     - punch.options
        The options may need further explanation.
        The `options` property must be a list, containing several objects.
        Example:
-       { hint, type: ['number', 'bool'] }
-     - resolver, which is hosted on the cloud
+       { name, hint, datatype: ['number', 'bool', 'text'] }
+     - punch.resolver, which is hosted on the cloud
+       resolve the punch, return `data` of the new record or `error`.
 
-**** TODO Punch                                                                 :DB:
+**** NEXT Punch                                                                 :DB:
      The record of punching-ins.
      Properties:
-     - _user
+     - _openid
      - subjectId
      - credits
      - time
 
 **** TODO CreditChanges                                                         :DB:
      The additional changes on credits.
-
+**** TODO UserBinding
 *** Cloud functions
-**** NEXT fetchSubjects
-     SCHEDULED: <2018-12-17 Mon>
+**** DONE fetchSubjects
+     CLOSED: [2018-12-18 Tue 15:10] SCHEDULED: <2018-12-17 Mon>
+     :LOGBOOK:
+     - State "DONE"       from "NEXT"       [2018-12-18 Tue 15:10]
+     CLOCK: [2018-12-18 Tue 13:51]--[2018-12-18 Tue 14:35] =>  0:44
+     :END:
      fetch all subjects
 **** TODO punchIn
      Params:
@@ -44,9 +67,19 @@
 
 ** Frontend
 *** Apis
-**** NEXT fetchSubjects
-     SCHEDULED: <2018-12-17 Mon>
+**** DONE fetchSubjects
+     CLOSED: [2018-12-18 Tue 16:31] SCHEDULED: <2018-12-17 Mon>
+     :LOGBOOK:
+     - State "DONE"       from "NEXT"       [2018-12-18 Tue 16:31]
+     :END:
      fetch the list of subjects
      the info of each subject: title, description, total records
 **** TODO fetchPunchOfSubject
      fetch punch records of specified subject
+*** Elements
+**** DONE Index
+     CLOSED: [2018-12-18 Tue 16:34]
+     :LOGBOOK:
+     - State "DONE"       from              [2018-12-18 Tue 16:34]
+     :END:
+**** TODO Subject

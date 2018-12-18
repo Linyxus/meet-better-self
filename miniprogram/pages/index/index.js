@@ -1,9 +1,14 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const apis = require('../../apis.js')
 
 Page({
-  bindOptInTap: function() {
+  bindOptInTap: function(e) {
+    const sid = e.currentTarget.dataset.id
+    const subjects = this.data.subjects
+    const subject = subjects.find(s => s.id == sid)
+    app.setGlobalData({currentSubject: subject})
     wx.navigateTo({
       url: '../subject/subject',
     })
@@ -14,12 +19,16 @@ Page({
   },
 
   onLoad: function() {
-    const db = wx.cloud.database()
-    db.collection('subjects').get()
-      .then(res => {
-        console.log(res)
-        app.globalData['subjects'] = res.data
-        this.setData({'subjects': res.data})
+    wx.showNavigationBarLoading()
+    apis.fetchSubjects()
+      .then(r => r.result)
+      .then(subjects => {
+        this.setData({subjects})
+        console.log(this.data)
+        wx.hideNavigationBarLoading()
+      })
+      .catch(e => {
+        console.log(e)
       })
   },
   // data: {

@@ -2,9 +2,7 @@
 <import src="card.wxml" />
 
 <view class="flow">
-  <template is="entry-card" />
-  <template is="entry-card" />
-  <template is="entry-card" />
-  <template is="entry-card" />
-  <template is="entry-card" />
+  <view wx:for="{{subjects}}" wx:for-index="idx" wx:for-item="item">
+    <template is="entry-card" data="{{...item}}"/>
+  </view>
 </view>

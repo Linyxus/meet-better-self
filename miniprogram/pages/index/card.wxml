@@ -1,15 +1,15 @@
 <template name="entry-card">
   <view class="entry-card">
     <view class="title">
-      <text>每天背单词</text>
+      <text>{{title}}</text>
     </view>
     <view class="desciption">
-      <text>每天背单词</text>
+      <text>{{description}}</text>
     </view>
     <view class="caption">
-      <text>已有123次打卡</text>
+      <text>已有{{count}}次打卡</text>
     </view>
-    <view class="opt-in-button" bindtap="bindOptInTap">
+    <view class="opt-in-button" bindtap="bindOptInTap" data-id="{{id}}">
       <text>立即加入</text>
     </view>
   </view>

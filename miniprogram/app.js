@@ -36,6 +36,9 @@ App({
   },
   globalData: {
     userInfo: null,
-    subjects: null,
+    currentSubject: null
+  },
+  setGlobalData: function(data) {
+    this.globalData = Object.assign({}, this.globalData, data)
   }
 })

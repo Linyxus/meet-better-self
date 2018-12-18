@@ -3,13 +3,13 @@
 <view class="flow">
   <view class="title-bar">
     <view class="title">
-      <text>每天背单词</text>
+      <text>{{subject.title}}</text>
     </view>
     <view class="desciption">
-      <text>每天背单词</text>
+      <text>{{subject.description}}</text>
     </view>
     <view class="caption">
-      <text>已有123次打卡</text>
+      <text>已有{{subject.count}}次打卡</text>
     </view>
     <view class="publish-button" bindtap="bindPulishTap">
       <text>打卡！</text>
