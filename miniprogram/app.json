@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/subject/subject"
+    "pages/subject/subject",
+    "pages/punch/punch"
   ],
   "window": {
     "backgroundTextStyle": "light",

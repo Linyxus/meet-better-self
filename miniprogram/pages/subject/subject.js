@@ -69,35 +69,38 @@ Page({
   },
 
   bindPulishTap: function() {
-    wx.chooseImage({
-      success: res => {
-        const tempFilePath = res.tempFilePaths[0];
-        const task = wx.uploadFile({
-          url: 'http://localhost:8000/upload',
-          filePath: tempFilePath,
-          name: 'file',
-          success: res => {
-            console.log(res)
-            this.setData({
-              checkData: [
-                {
-                  id: 'cd-10',
-                  user: '徐逸辰',
-                  time: '2018.11.13 21:23',
-                  words: '第一次背单词，坚持！！',
-                  img: res.data,
-                  thumbUps: 123
-                },
-              ]
-            })
-          }
-        })
-        task.onProgressUpdate(res => {
-          console.log('上传进度', res.progress)
-        })
-      },
-      count: 1,
+    wx.navigateTo({
+      url: '../punch/punch',
     })
+    // wx.chooseImage({
+    //   success: res => {
+    //     const tempFilePath = res.tempFilePaths[0];
+    //     const task = wx.uploadFile({
+    //       url: 'http://localhost:8000/upload',
+    //       filePath: tempFilePath,
+    //       name: 'file',
+    //       success: res => {
+    //         console.log(res)
+    //         this.setData({
+    //           checkData: [
+    //             {
+    //               id: 'cd-10',
+    //               user: '徐逸辰',
+    //               time: '2018.11.13 21:23',
+    //               words: '第一次背单词，坚持！！',
+    //               img: res.data,
+    //               thumbUps: 123
+    //             },
+    //           ]
+    //         })
+    //       }
+    //     })
+    //     task.onProgressUpdate(res => {
+    //       console.log('上传进度', res.progress)
+    //     })
+    //   },
+    //   count: 1,
+    // })
   },
 
   /**

@@ -1,0 +1,9 @@
+/* miniprogram/pages/punch/punch.wxss */
+
+.text {
+  border-width: 1rpx;
+  border-color: grey;
+  border-style: solid;
+  margin: 5rpx;
+  padding: 10rpx;
+}

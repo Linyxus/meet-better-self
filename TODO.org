@@ -1,13 +1,13 @@
 #+BEGIN: clocktable :scope file :maxlevel 3
-#+CAPTION: Clock summary at [2018-12-18 Tue 14:35]
-| Headline                | Time |      |      |
-|-------------------------+------+------+------|
-| *Total time*              | *0:57* |      |      |
-|-------------------------+------+------+------|
-| Meet better self        | 0:57 |      |      |
-| \_  Backend             |      | 0:57 |      |
-| \_    Database elements |      |      | 0:13 |
-| \_    Cloud functions   |      |      | 0:44 |
+#+CAPTION: Clock summary at [2018-12-18 Tue 21:13]
+| Headline                 | Time   |      |      |
+|--------------------------+--------+------+------|
+| *Total time*             | *0:57* |      |      |
+|--------------------------+--------+------+------|
+| PROJECT Meet better self | 0:57   |      |      |
+| \_  Backend              |        | 0:57 |      |
+| \_    Database elements  |        |      | 0:13 |
+| \_    Cloud functions    |        |      | 0:44 |
 #+END:
 
 * PROJECT Meet better self
@@ -19,7 +19,7 @@
    The backend is build with Wx Cloud.
 
 *** Database elements
-**** DONE Subject                                                               :NO_DB:
+**** DONE Subject                                                     :NO_DB:
      CLOSED: [2018-12-18 Tue 16:33] SCHEDULED: <2018-12-17 Mon>
      :LOGBOOK:
      - State "DONE"       from "DELEGATED"  [2018-12-18 Tue 16:33]
@@ -39,7 +39,7 @@
      - punch.resolver, which is hosted on the cloud
        resolve the punch, return `data` of the new record or `error`.
 
-**** NEXT Punch                                                                 :DB:
+**** NEXT Punch                                                          :DB:
      The record of punching-ins.
      Properties:
      - _openid
@@ -47,7 +47,7 @@
      - credits
      - time
 
-**** TODO CreditChanges                                                         :DB:
+**** TODO CreditChanges                                                  :DB:
      The additional changes on credits.
 **** TODO UserBinding
 *** Cloud functions
