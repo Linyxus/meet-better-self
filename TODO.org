@@ -48,5 +48,5 @@
      SCHEDULED: <2018-12-17 Mon>
      fetch the list of subjects
      the info of each subject: title, description, total records
-**** TODO fetchBunchOfSubject
-     fetch bunch records of specified subject
+**** TODO fetchPunchOfSubject
+     fetch punch records of specified subject
