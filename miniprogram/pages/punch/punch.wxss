@@ -8,16 +8,50 @@
   min-height: 200rpx;
 }
 
-.imagesBar {
-  display: flex;
-  height: 50rpx;
-  flex-direction: row;
+.image-button {
+  background-color: rgba(55, 34, 173, 0.774);
+  text-align: center;
+  margin: 20rpx;
+  color: white;
+  border-radius: 5rpx;
+  padding: 25rpx;
 }
 
-.imagesLabel {
+.bool-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12rpx;
+}
+
+.bool-input__label {
   flex-grow: 1;
 }
 
-.imagesButton {
-  width: 10rpx;
+.number-input {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-items: flex-start;
+  padding: 20rpx;
+}
+
+.number-input__label {
+  color: grey;
+}
+
+.number-input__text {
+  border-bottom-color: gray;
+  border-bottom-width: 2rpx;
+  border-bottom-style: solid;
+  padding: 12rpx;
+}
+
+.submit-button {
+  background-color: dodgerblue;
+  text-align: center;
+  margin: 20rpx;
+  color: white;
+  border-radius: 5rpx;
+  padding: 25rpx;
 }

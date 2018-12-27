@@ -1,6 +1,5 @@
 // pages/subject/subject.js
 
-const moment = require('moment')
 const app = getApp()
 
 Page({

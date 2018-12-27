@@ -49,7 +49,7 @@
      - _openid
      - subjectId
      - credits
-     - time
+     - createdAt
 
 **** TODO CreditChanges                                                  :DB:
      The additional changes on credits.
@@ -68,6 +68,16 @@
      - options
      Results:
      - success / failure
+*** Resolver Systems
+    main cluster:
+    front --> punchIn --(subjectId)--> resolver --> result(fail of success) --> front
+    resolver(data, context):
+      - data: options -- a map
+      - context:
+        - now
+        - db
+      - result: the record data generated
+      - throw error
 
 ** Frontend
 *** Apis

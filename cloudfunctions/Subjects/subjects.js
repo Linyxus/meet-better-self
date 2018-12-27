@@ -1,3 +1,5 @@
+const wordsDaily = require('./resolvers/wordsDaily')
+
 const subjects = [
   {
     id: 'words-daily',
@@ -11,7 +13,7 @@ const subjects = [
           datatype: 'number'
         }
       ],
-      resolver: () => {data: 'Success!'}
+      resolver: wordsDaily.resolver
     }
   },
   {

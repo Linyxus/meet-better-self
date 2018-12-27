@@ -1,6 +1,37 @@
 <!--miniprogram/pages/punch/punch.wxml-->
 <view class='flow'>
   <view class='text'>
-    <textarea bindblur="bindTextAreaBlur" placeholder="你此刻想说什么..." />
+    <textarea bindblur="bindTextAreaBlur" placeholder="你此刻想说什么..." bindinput='handleWordsInput'/>
+  </view>
+  <view class='image-button' bindtap='handleChooseImage'>
+      上传图片 ({{imageUrls.length}}/3)
+  </view>
+
+  <view wx:for="{{subject.punch.options}}">
+    <!-- number input -->
+    <view wx:if="{{item.datatype == 'number'}}">
+      <view class="'number-input'">
+        <view class="number-input__label">
+          {{item.hint}}
+        </view>
+        <view class="number-input__text">
+          <input type="number" confirm-type="next" data-name="{{item.name}}" bindinput='handleInput'/>
+        </view>
+      </view>
+    </view>
+
+    <!-- bool input -->
+    <view wx:if="{{item.datatype == 'bool'}}">
+      <view class="bool-input">
+        <view class="bool-input__label">
+          Please choose true or false:
+        </view>
+        <switch checked="{{false}}"  data-name="{{item.name}}" bindchange='handleInput'/>
+      </view>
+    </view>
+  </view>
+  
+  <view class="submit-button" bindtap='handleSubmit'>
+    打卡！
   </view>
 </view>

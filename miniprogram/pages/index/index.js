@@ -19,6 +19,19 @@ Page({
   },
 
   onLoad: function() {
+    wx.cloud.callFunction({
+      name: 'Subjects',
+      data: {
+        scope: 'punchIn',
+        subjectId: 'words-daily',
+        options: {
+          words: '123',
+          imageUrls: ['123'],
+          count: 60
+        }
+      }
+    })
+    .then(r => console.log(r))
     wx.showNavigationBarLoading()
     apis.fetchSubjects()
       .then(r => r.result)
