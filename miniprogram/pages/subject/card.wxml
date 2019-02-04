@@ -1,7 +1,16 @@
 <template name="check-card">
   <view class="check-card">
     <view class="banner">
-      <image src="{{imageIds[0]}}" mode="aspectFill"></image>
+      <swiper
+        class="banner"
+        indicator-dots="true"
+        autoplay="false" >
+        <block wx:for="{{imageIds}}">
+          <swiper-item>
+            <image src="{{item}}" mode="aspectFill" class="banner" />
+          </swiper-item>
+        </block>
+      </swiper>
     </view>
     <view class="nickname">
       <text>{{_openid}}</text>
