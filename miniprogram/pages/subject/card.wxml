@@ -1,19 +1,19 @@
 <template name="check-card">
   <view class="check-card">
     <view class="banner">
-      <image src="{{img}}" mode="aspectFill"></image>
+      <image src="{{imageIds[0]}}" mode="aspectFill"></image>
     </view>
     <view class="nickname">
-      <text>{{user}}</text>
+      <text>{{_openid}}</text>
     </view>
     <view class="time">
-      <text>{{time}}</text>
+      <text>{{createdAt}}</text>
     </view>
     <view class="words">
       <text>{{words}}</text>
     </view>
     <view class="card__action">
-      <view class="action-button" bindtap="bindButtonTap" data-id="{{id}}">
+      <view class="action-button" bindtap="bindButtonTap" data-id="{{_id}}">
         <text>
           {{thumbUps}} 赞
         </text>

@@ -5,6 +5,8 @@ const resolver = async (args, context) => {
     _openid: _openid,
     createdAt: now,
     credits: args.count,
+    words: args.words,
+    imageIds: args.imageIds
   }
 
   try {

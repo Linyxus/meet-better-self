@@ -15,7 +15,7 @@
       <text>打卡！</text>
     </view>
   </view>
-  <view wx:for="{{checkData}}" wx:key="id">
+  <view wx:for="{{punchData}}" wx:key="id">
     <template is="check-card" data="{{...item}}" />
   </view>
 </view>

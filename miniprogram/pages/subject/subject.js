@@ -1,4 +1,5 @@
 // pages/subject/subject.js
+const apis = require('../../apis')
 
 const app = getApp()
 
@@ -102,11 +103,22 @@ Page({
     // })
   },
 
+  reloadPunch: function() {
+    wx.showNavigationBarLoading()
+    apis.fetchSubjectPunch(this.data.subject.id)
+      .then(resp => {
+        console.log(resp.result)
+        this.setData({punchData: resp.result})
+        wx.hideNavigationBarLoading()
+      })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.setData({subject: app.globalData.currentSubject})
+    this.reloadPunch()
   },
 
   /**
@@ -119,7 +131,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.reloadPunch()
   },
 
   /**
