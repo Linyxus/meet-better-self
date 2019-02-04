@@ -19,7 +19,7 @@
    The backend is build with Wx Cloud.
 
 *** Database elements
-**** DONE Subject                                                     :NO_DB:
+**** DONE Subject                                                    :NO_DB:
      CLOSED: [2018-12-18 Tue 16:33] SCHEDULED: <2018-12-17 Mon>
      :LOGBOOK:
      - State "DONE"       from "DELEGATED"  [2018-12-18 Tue 16:33]
@@ -54,6 +54,8 @@
 **** TODO CreditChanges                                                  :DB:
      The additional changes on credits.
 **** TODO UserBinding
+     - Student Id
+     - Name
 *** Cloud functions
 **** DONE fetchSubjects
      CLOSED: [2018-12-18 Tue 15:10] SCHEDULED: <2018-12-17 Mon>
@@ -62,7 +64,7 @@
      CLOCK: [2018-12-18 Tue 13:51]--[2018-12-18 Tue 14:35] =>  0:44
      :END:
      fetch all subjects
-**** TODO punchIn
+**** DONE punchIn
      Params:
      - subjectId
      - options
@@ -88,7 +90,7 @@
      :END:
      fetch the list of subjects
      the info of each subject: title, description, total records
-**** TODO fetchPunchOfSubject
+**** DONE fetchPunchOfSubject
      fetch punch records of specified subject
 *** Elements
 **** DONE Index
@@ -96,4 +98,5 @@
      :LOGBOOK:
      - State "DONE"       from              [2018-12-18 Tue 16:34]
      :END:
-**** NEXT Subject
+**** DONE Subject
+**** TODO UserBinding
