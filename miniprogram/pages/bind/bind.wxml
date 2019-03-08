@@ -1,0 +1,5 @@
+<!--miniprogram/pages/bind/bind.wxml-->
+<view class="flow">
+    <input placeholder="输入学号..." class="sid-input" bindinput="handleInput" />
+    <view class="bind-button" bindtap="handleBindButtonTap" >立即绑定</view>
+</view>

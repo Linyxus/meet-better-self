@@ -28,6 +28,17 @@ const fetchSubjectPunch = subjectId => {
   })
 }
 
+const bindUser = sid => {
+  return wx.cloud.callFunction({
+    name: 'Subjects',
+    data: {
+      scope: 'bindUser',
+      sid,
+    }
+  })
+}
+
 exports.fetchSubjects = fetchSubjects
 exports.punchIn = punchIn
 exports.fetchSubjectPunch = fetchSubjectPunch
+exports.bindUser = bindUser

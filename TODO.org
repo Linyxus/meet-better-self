@@ -54,8 +54,8 @@
 **** TODO CreditChanges                                                  :DB:
      The additional changes on credits.
 **** TODO UserBinding
-     - Student Id
-     - Name
+     - openid: open id
+     - sid: student id
 *** Cloud functions
 **** DONE fetchSubjects
      CLOSED: [2018-12-18 Tue 15:10] SCHEDULED: <2018-12-17 Mon>

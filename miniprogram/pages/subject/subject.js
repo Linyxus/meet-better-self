@@ -131,6 +131,9 @@ Page({
    */
   onShow: function () {
     this.reloadPunch()
+    if (!app.globalData.hasBind) {
+      app.toBind()
+    }
   },
 
   /**

@@ -1,0 +1,18 @@
+/* miniprogram/pages/bind/bind.wxss */
+
+.sid-input {
+    border-bottom-color: gray;
+    border-bottom-width: 2rpx;
+    border-bottom-style: solid;
+    padding: 12rpx;
+    margin: 20rpx;
+}
+
+.bind-button {
+    background-color: cornflowerblue;
+    padding: 20rpx;
+    margin: 10rpx;
+    border-radius: 5rpx;
+    text-align: center;
+    color: white;
+}

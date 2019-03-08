@@ -36,9 +36,19 @@ App({
   },
   globalData: {
     userInfo: null,
-    currentSubject: null
+    currentSubject: null,
+    hasBind: false,
+    bind: {
+      sid: null,
+      name: null
+    }
   },
   setGlobalData: function(data) {
     this.globalData = Object.assign({}, this.globalData, data)
+  },
+  toBind: function() {
+    wx.navigateTo({
+      url: '../bind/bind'
+    })
   }
 })

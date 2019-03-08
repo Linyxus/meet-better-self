@@ -19,6 +19,26 @@ Page({
   },
 
   onLoad: function() {
+    wx.cloud.callFunction({
+      name: 'Subjects',
+      data: {
+        scope: 'hasBinding'
+      }
+    })
+    .then(r => r.result)
+    .then(bind => {
+      app.setGlobalData({hasBind: bind.length != 0})
+      if (bind.length) {
+        app.setGlobalData({
+          bind: {
+            sid: bind[0].sid
+          }
+        })
+      }
+      if (!bind.length) {
+        app.toBind()
+      }
+    })
     // wx.cloud.callFunction({
     //   name: 'Subjects',
     //   data: {
@@ -44,6 +64,9 @@ Page({
         console.log(e)
       })
   },
+
+  onShow: function() {
+  }
   // data: {
   //   motto: 'Hello World',
   //   userInfo: {},

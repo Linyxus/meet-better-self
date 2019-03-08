@@ -3,6 +3,8 @@ const cloud = require('wx-server-sdk')
 const fetchSubjects = require('./handlers/fetchSubjects')
 const punchIn = require('./handlers/punchIn')
 const fetchSubjectPunch = require('./handlers/fetchSubjectPunch')
+const hasBinding = require('./handlers/hasBinding')
+const bindUser = require('./handlers/bindUser')
 
 cloud.init()
 
@@ -20,6 +22,12 @@ exports.main = async (event, context) => {
   }
   if (scope == 'fetchSubjectPunch') {
     return await fetchSubjectPunch.handler(event, context)
+  }
+  if (scope == 'hasBinding') {
+    return await hasBinding.handler(event, context)
+  }
+  if (scope == 'bindUser') {
+    return await bindUser.handler(event, context)
   }
 
   throw 'No available scope is found.'
